@@ -27,9 +27,10 @@ function normalizeFileName(file) {
 // Serving things
 function serve(file, response) {
 
-    if (chacheHit(file) !== NULL) {
+    if (cacheHit(file) !== null) {
 
         // We have a cache hit so we serve the rendered content
+
 
     } else {
 
@@ -40,9 +41,17 @@ function serve(file, response) {
 }
 
 // Checking for cached contents
-function chacheHit(file) {
+function cacheHit(file) {
 
     return renderedContents[normalizeFileName(file)] || null;
+
+}
+
+// Caching a content
+function addContentToCache(file, contentData) {
+
+    console.log('Adding to cache: %s', normalizeFileName(file));
+    renderedContents[normalizeFileName(file)] = _.extend({ file: normalizeFileName(file), date: new Date() }, contentData);
 
 }
 

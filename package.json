@@ -27,6 +27,7 @@
     "dependencies": {
         "dotenv": "^6.0.0",
         "express": "^4.16.3",
-        "markdown-it": "^8.4.1"
+        "markdown-it": "^8.4.1",
+        "underscores": "0.0.1"
     }
 }
