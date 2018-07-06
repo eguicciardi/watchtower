@@ -3,8 +3,11 @@ require('dotenv').load({ silent: true }); //Please take .ev.sample as reference
 
 var http = require('http');
 var express = require('express');
+var morgan = require('morgan');
 
 var app = express();
+app.use(morgan('combined'));
+
 var server = http.createServer(app);
 
 /* Static things */
@@ -72,6 +75,7 @@ app.get('/:slug', function(request, response) {
 
     if (isNaN(request.params.slug)) {
 
+        console.log('We have a request for the slug: %s', request.params.slug);
         var fileToBeServed = contentRoot + request.params.slug;
         serve(fileToBeServed, response);
 
