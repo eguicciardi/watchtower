@@ -15,8 +15,8 @@ Watchtower relies on a series of dependencies tidily packed in package.json:
 # Installation
 
 # License
-Watchtower is MIT-Licensed. It's not required at all but I'll really appreciate a mention to this repository or [https://guicciardi.net](my website).
+Watchtower is MIT-Licensed. It's not required at all but I'll really appreciate a mention to this repository or [my personal website](https://guicciardi.net).
 
 # Change log
 
-**1.0.0** Initial release, it starts without so many errors
+**0.0.1** Initial release, it starts without so many errors
